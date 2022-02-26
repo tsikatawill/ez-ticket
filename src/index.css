@@ -10,11 +10,24 @@
 }
 
 .App {
-  @apply flex flex-col justify-between min-h-screen;
+  @apply flex flex-col min-h-screen;
 }
 
 footer {
-  margin-top: auto;
+  @apply mt-auto;
+}
+
+section.ceo {
+  background: linear-gradient(
+      rgba(255, 0, 0, 0.5),
+      rgba(255, 0, 0, 0.7),
+      rgba(255, 0, 0, 0.8)
+    ),
+    url(./imgs/skateboard-group.png) center center/cover no-repeat;
+}
+
+section .container {
+  @apply py-14;
 }
 
 h1,
