@@ -9,12 +9,8 @@
   transition: all 0.2s ease-in;
 }
 
-/*
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: space-between;
+.App {
+  @apply flex flex-col justify-between min-h-screen;
 }
 
 footer {
@@ -27,25 +23,12 @@ h3,
 h4,
 h5 {
   @apply font-bold;
-} */
-
-body {
-  @apply bg-slate-100;
 }
 
-.divider {
-  height: 2px;
-  @apply bg-gray-700 my-2;
+section .section-head {
+  @apply text-2xl text-center capitalize;
 }
 
-.history-card.expense {
-  border-right: 4px solid rgb(226, 6, 6);
-}
-
-.history-card.income {
-  border-right: 4px solid green;
-}
-
-input {
-  @apply rounded-sm;
+section .section-head span {
+  @apply text-red-700;
 }
