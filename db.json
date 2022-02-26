@@ -1,0 +1,7 @@
+{
+  "transactions": [
+    { "id": 1, "type": "income", "category": "Salary", "amount": "4500" },
+    { "id": 2, "type": "income", "category": "Freelance", "amount": "1500" },
+    { "id": 3, "type": "expense", "category": "Chop alone", "amount": "500" }
+  ]
+}
