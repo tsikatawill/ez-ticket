@@ -1,21 +1,27 @@
-import React, { useContext } from "react";
-import CEO from "./components/CEO";
+import React from "react";
+import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Showcase from "./components/Showcase";
-import SpecialSale from "./components/SpecialSale";
-import { generalContext } from "./context/generalContext";
+import Sidebar from "./components/Sidebar";
+import Provider from "./context/ProductModalContext";
 
 const App = () => {
-  const { darkTheme } = useContext(generalContext);
   return (
-    <div className={`App ${darkTheme ? "dark" : ""}`}>
+    <div
+      className="App flex flex-col"
+      style={{
+        minHeight: "100vh",
+      }}
+    >
       <Header />
-      <main>
-        <Showcase />
-        <CEO />
-        <SpecialSale />
-      </main>
+      <div className="container flex mb-auto">
+        <Sidebar />
+        <Provider>
+          <main className="w-4/5 px-4">
+            <Outlet />
+          </main>
+        </Provider>
+      </div>
       <Footer />
     </div>
   );

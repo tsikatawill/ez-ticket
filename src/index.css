@@ -9,39 +9,15 @@
   transition: all 0.2s ease-in;
 }
 
-.App {
-  @apply flex flex-col min-h-screen;
+.product-modal {
+  /* scale: 0; */
+  top: 1000px;
+  opacity: 0.7;
+  transition: all 0.3s ease-in;
 }
 
-footer {
-  @apply mt-auto;
-}
-
-section.ceo {
-  background: linear-gradient(
-      rgba(255, 0, 0, 0.5),
-      rgba(255, 0, 0, 0.7),
-      rgba(255, 0, 0, 0.8)
-    ),
-    url(./imgs/skateboard-group.png) center center/cover no-repeat;
-}
-
-section .container {
-  @apply py-14;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  @apply font-bold;
-}
-
-section .section-head {
-  @apply text-2xl text-center capitalize;
-}
-
-section .section-head span {
-  @apply text-red-700;
+.product-modal.open {
+  opacity: 1;
+  top: 0;
+  scale: 1;
 }
